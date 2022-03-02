@@ -16,7 +16,7 @@ create table dbo.Circuits (
 go
 
 bulk insert dbo.Circuits
-from 'C:\Projects\formula-one\original_dataset\circuits.csv'
+from 'C:\Projects\formula-one\0_original_dataset\circuits.csv'
 with (
 	fieldterminator = ',',
 	ROWTERMINATOR = '0x0a',
