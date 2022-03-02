@@ -1,3 +1,5 @@
+use FormulaOneLanding
+
 if object_id('dbo.Circuits') is not null
 	drop table dbo.circuits
 go
