@@ -1,4 +1,4 @@
-use FormulaOneLanding
+use FormulaOneAnalysis
 
 if object_id( 'dbo.CreateDataTypeAnalysisTable', 'P' ) is not null  
     drop procedure dbo.CreateDataTypeAnalysisTable  
@@ -25,11 +25,10 @@ as
 			, ',  '
 			, column_name
 			, 'Type varchar(50)')
-	from INFORMATION_SCHEMA.COLUMNS
+	from FormulaOneLanding.INFORMATION_SCHEMA.COLUMNS
 	where table_name = @tableName 
 
 	set @sqlStatement = concat('use FormulaOneAnalysis ; create table dbo.', @tableName, 'TypeAnalysis (  ', @sqlStatement, ')')
 
 	exec (@sqlStatement)
 go
-
