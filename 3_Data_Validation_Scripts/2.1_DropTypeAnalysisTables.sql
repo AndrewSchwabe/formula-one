@@ -8,6 +8,4 @@ select @sqlStatement = coalesce(@sqlStatement + ';', '') +
 from INFORMATION_SCHEMA.TABLES
 where table_name like '%TypeAnalysis'
 
-set @sqlStatement = concat('use FormulaOneAnalysis ; ', @sqlStatement)
-
 execute(@sqlStatement)
