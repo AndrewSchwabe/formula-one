@@ -1,7 +1,6 @@
 use FormulaOneAnalysis
 
-if object_id( 'dbo.CreateDataTypeAnalysisColumns', 'P' ) is not null  
-    drop procedure dbo.CreateDataTypeAnalysisColumns  
+drop procedure if exists dbo.CreateDataTypeAnalysisColumns
 go
 
 create procedure dbo.CreateDataTypeAnalysisColumns 
