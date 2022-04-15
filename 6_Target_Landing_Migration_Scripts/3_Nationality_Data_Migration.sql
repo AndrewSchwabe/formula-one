@@ -1,7 +1,13 @@
 use FormulaOne
 
-insert into dbo.Seasons (year, url)
+insert into dbo.Nationality (nationality)
 select 
-	year
-	, url
-from FormulaOneAnalysis.dbo.SeasonsTypeAnalysis
+	distinct *
+from (
+	select nationality 
+	from FormulaOneAnalysis.dbo.ConstructorsTypeAnalysis
+	
+	union
+	
+	select nationality
+	from FormulaOneAnalysis.dbo.DriverTypeAnalysis) as nationalities
