@@ -1,6 +1,6 @@
 use FormulaOne
 
-insert into dbo.Seasons (year, url)
+insert into dbo.Season (year, url)
 select 
 	year
 	, url

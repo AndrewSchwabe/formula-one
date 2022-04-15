@@ -1,8 +1,8 @@
 use FormulaOne;
 
-if object_id('dbo.Circuits', 'U') is null
+if object_id('dbo.Circuit', 'U') is null
 begin
-    create table dbo.Circuits (
+    create table dbo.Circuit (
         id int not null,
         reference_name varchar(25) not null, 
 		name nvarchar(75) not null,
@@ -13,7 +13,7 @@ begin
 		alt int,
 		url varchar(100)
 
-        constraint pk_circuits primary key clustered (
+        constraint pk_circuit primary key clustered (
             id asc
         ) with (
             pad_index = off, 
